@@ -1,5 +1,6 @@
 # Container image that runs your code
-FROM debian:bookworm-slim
+# Using Ubuntu 24.04 which has glibc 2.38+ (required by prequel CLI binary)
+FROM ubuntu:24.04
 
 RUN apt update && apt install -y curl sudo wget
 
